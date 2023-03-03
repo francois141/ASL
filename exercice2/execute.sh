@@ -56,3 +56,7 @@ echo "RUN VECTOR"
 ./main_vector 1300
 ./main_vector 1400
 ./main_vector 1500
+
+rm main_no_optimisation
+rm main_no_vector
+rm main_vector

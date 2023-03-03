@@ -169,7 +169,7 @@ int main(int argc, char **argv) {
 #ifdef __x86_64__
     srand(time(0));
 
-    for(auto nb_iterations = (1 << 4); nb_iterations <= (1 << 23); nb_iterations <<= 1) {
+    for(unsigned int nb_iterations = (1 << 4); nb_iterations <= (1 << 23); nb_iterations <<= 1) {
         const unsigned int n = nb_iterations;
         const unsigned int nb_tests = 30;
 
@@ -198,8 +198,7 @@ int main(int argc, char **argv) {
         quick_sort(values,0,nb_tests);
         quick_sort(values_optimized,0,nb_tests);
 
-        // TODO : HANDLE BOTH TEST_CASE
-
+        // N is always even ==> Median is average of arr[idx1] and arr[idx2]
         int idx1 = nb_tests/2 - 1;
         int idx2 = nb_tests/2;
 
