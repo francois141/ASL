@@ -1,0 +1,220 @@
+=========================================
+N = 16 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 133.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 73.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 32 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 261.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 137.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 64 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 517.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 265.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 128 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 1030.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 521.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 256 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 2061.500000 cycles measured => 0.000001 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 1034.000000 cycles measured => 0.000000 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 512 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 4114.000000 cycles measured => 0.000002 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 2067.000000 cycles measured => 0.000001 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 1024 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 8242.500000 cycles measured => 0.000003 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 4143.000000 cycles measured => 0.000002 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 2048 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 16560.500000 cycles measured => 0.000006 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 8355.500000 cycles measured => 0.000003 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 4096 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 32878.000000 cycles measured => 0.000012 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 16437.000000 cycles measured => 0.000006 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 8192 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 65637.000000 cycles measured => 0.000024 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 32830.500000 cycles measured => 0.000012 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 16384 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 132120.500000 cycles measured => 0.000049 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 66251.000000 cycles measured => 0.000025 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 32768 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 265657.000000 cycles measured => 0.000098 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 133287.500000 cycles measured => 0.000049 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 65536 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 546102.000000 cycles measured => 0.000202 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 274982.500000 cycles measured => 0.000102 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 131072 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 1083604.000000 cycles measured => 0.000401 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 540816.500000 cycles measured => 0.000200 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 262144 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 2160562.000000 cycles measured => 0.000800 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 1074971.000000 cycles measured => 0.000398 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 524288 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 4423170.000000 cycles measured => 0.001638 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 2187084.000000 cycles measured => 0.000810 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 1048576 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 8907054.500000 cycles measured => 0.003299 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 4625695.000000 cycles measured => 0.001713 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 2097152 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 17826679.000000 cycles measured => 0.006602 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 9397566.000000 cycles measured => 0.003481 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 4194304 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 35653590.500000 cycles measured => 0.013205 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 18984357.500000 cycles measured => 0.007031 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+=========================================
+N = 8388608 
+=========================================
+[BASE VERSION]
+RDTSC instruction:
+ 71369124.500000 cycles measured => 0.026433 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+[OPTIMIZED VERSION]
+RDTSC instruction:
+ 37915319.000000 cycles measured => 0.014043 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+

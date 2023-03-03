@@ -1,0 +1,1 @@
+gcc benchmark.cpp -O3 -mfma -fno-tree-vectorize -o benchmark 
