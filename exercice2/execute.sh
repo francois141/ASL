@@ -22,21 +22,21 @@ echo "RUN NO OPTIMISATION"
 
 echo "RUN OPTIMISATION"
 
-./main_no_vectior 100
-./main_no_vectior 200
-./main_no_vectior 300
-./main_no_vectior 400
-./main_no_vectior 500
-./main_no_vectior 600
-./main_no_vectior 700
-./main_no_vectior 800
-./main_no_vectior 900
-./main_no_vectior 1000
-./main_no_vectior 1100
-./main_no_vectior 1200
-./main_no_vectior 1300
-./main_no_vectior 1400
-./main_no_vectior 1500
+./main_no_vector 100
+./main_no_vector 200
+./main_no_vector 300
+./main_no_vector 400
+./main_no_vector 500
+./main_no_vector 600
+./main_no_vector 700
+./main_no_vector 800
+./main_no_vector 900
+./main_no_vector 1000
+./main_no_vector 1100
+./main_no_vector 1200
+./main_no_vector 1300
+./main_no_vector 1400
+./main_no_vector 1500
 
 
 echo "RUN VECTOR"
