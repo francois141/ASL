@@ -79,13 +79,27 @@ void compute(double *x, double *y, int n) {
 }
 
 void compute_optimized(double *x, double *y, int n) {
-    double acc1 = 0.0;
-    double acc2 = 0.0;
-    for(int i = 0; i < n;i++) {
-       acc1 = acc1 + x[i]*x[i];
-       acc2 = acc2 + y[i]*y[i]*y[i];
-    }
-    x[0] = acc1 + acc2;
+  double acc1 = 0.0;
+  double acc2 = 0.0;
+  double acc3 = 0.0;
+  double acc4 = 0.0;
+  double acc5 = 0.0;
+  double acc6 = 0.0;
+  double acc7 = 0.0;
+  double acc8 = 0.0;
+    
+  for (int i = 0; i < n;i+=4) {
+    acc1 = acc1 + x[i]*x[i];
+    acc2 = acc2 + y[i]*y[i]*y[i];
+    acc3 = acc3 + x[i+1]*x[i+1];
+    acc4 = acc4 + y[i+1]*y[i+1]*y[i+1];
+    acc5 = acc5 + x[i+2]*x[i+2];
+    acc6 = acc6 + y[i+2]*y[i+2]*y[i+2];
+    acc7 = acc7 + x[i+3]*x[i+3];
+    acc8 = acc8 + y[i+3]*y[i+3]*y[i+3];
+  }
+    
+  x[0] = acc1 + acc2 + acc3 + acc4 + acc5 + acc6 +acc7 +acc8;
 }
 
 /* 
