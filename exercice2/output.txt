@@ -1,303 +1,453 @@
 RUN NO OPTIMISATION
 n=100 
 RDTSC instruction:
- 9102870.000000 cycles measured => 0.003371 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 9433375.000000 cycles measured => 0.003494 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 3655.250000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.003655 seconds. 
+ 2467.937500 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.002468 seconds. 
 
 C gettimeofday() function:
- 0.003646 seconds measured
+ 0.002647 seconds measured
 
 n=200 
 RDTSC instruction:
- 72952522.000000 cycles measured => 0.027019 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 76329895.000000 cycles measured => 0.028270 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 29057.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.029057 seconds. 
+ 21632.500000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.021632 seconds. 
 
 C gettimeofday() function:
- 0.029034 seconds measured
+ 0.022512 seconds measured
 
 n=300 
 RDTSC instruction:
- 245319576.000000 cycles measured => 0.090859 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 248802064.000000 cycles measured => 0.092149 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 98621.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.098621 seconds. 
+ 67221.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.067221 seconds. 
 
 C gettimeofday() function:
- 0.098427 seconds measured
+ 0.071058 seconds measured
 
 n=400 
 RDTSC instruction:
- 601896191.000000 cycles measured => 0.222925 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 585296270.000000 cycles measured => 0.216776 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 239204.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.239204 seconds. 
+ 158847.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.158847 seconds. 
 
 C gettimeofday() function:
- 0.240967 seconds measured
+ 0.169634 seconds measured
 
 n=500 
 RDTSC instruction:
- 1181908811.000000 cycles measured => 0.437744 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 993092900.000000 cycles measured => 0.367812 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 472889.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.472889 seconds. 
+ 311844.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.311844 seconds. 
 
 C gettimeofday() function:
- 0.479636 seconds measured
+ 0.307488 seconds measured
 
 n=600 
 RDTSC instruction:
- 2036199002.000000 cycles measured => 0.754148 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 1760486720.000000 cycles measured => 0.652032 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 835566.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.835566 seconds. 
+ 536226.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.536226 seconds. 
 
 C gettimeofday() function:
- 0.816426 seconds measured
+ 0.523475 seconds measured
 
 n=700 
 RDTSC instruction:
- 3307251007.000000 cycles measured => 1.224908 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 2876909842.000000 cycles measured => 1.065522 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 1320161.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.320161 seconds. 
+ 836382.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.836382 seconds. 
 
 C gettimeofday() function:
- 1.317667 seconds measured
+ 0.895843 seconds measured
 
 n=800 
 RDTSC instruction:
- 4885165963.000000 cycles measured => 1.809321 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 4508222850.000000 cycles measured => 1.669712 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 1948955.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.948955 seconds. 
+ 1442610.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.442610 seconds. 
 
 C gettimeofday() function:
- 1.936423 seconds measured
+ 1.318179 seconds measured
 
 n=900 
 RDTSC instruction:
- 6998298818.000000 cycles measured => 2.591963 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 6675301820.000000 cycles measured => 2.472334 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 2768895.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 2.768895 seconds. 
+ 1933457.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.933457 seconds. 
 
 C gettimeofday() function:
- 2.752047 seconds measured
+ 1.874675 seconds measured
 
 n=1000 
 RDTSC instruction:
- 9422353610.000000 cycles measured => 3.489761 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 9587237856.000000 cycles measured => 3.550829 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 3860873.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 3.860873 seconds. 
+ 2553636.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 2.553636 seconds. 
 
 C gettimeofday() function:
- 3.772642 seconds measured
+ 2.540770 seconds measured
 
 n=1100 
 RDTSC instruction:
- 12570256347.000000 cycles measured => 4.655650 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 11890935366.000000 cycles measured => 4.404050 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 5036624.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 5.036624 seconds. 
+ 3485553.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 3.485553 seconds. 
 
 C gettimeofday() function:
- 5.030629 seconds measured
+ 3.558517 seconds measured
 
 n=1200 
 RDTSC instruction:
- 16620476517.000000 cycles measured => 6.155732 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 16595557780.000000 cycles measured => 6.146503 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 6775075.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 6.775075 seconds. 
+ 4921209.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 4.921209 seconds. 
 
 C gettimeofday() function:
- 6.711645 seconds measured
+ 4.504055 seconds measured
 
 n=1300 
 RDTSC instruction:
- 20947859176.000000 cycles measured => 7.758466 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 18871735090.000000 cycles measured => 6.989532 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 8383122.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 8.383122 seconds. 
+ 6018352.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 6.018352 seconds. 
 
 C gettimeofday() function:
- 8.495250 seconds measured
+ 5.818770 seconds measured
 
 n=1400 
 RDTSC instruction:
- 27077661363.000000 cycles measured => 10.028763 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 24909000552.000000 cycles measured => 9.225556 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 10799163.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 10.799163 seconds. 
+ 7175228.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 7.175228 seconds. 
 
 C gettimeofday() function:
- 11.151533 seconds measured
+ 7.096405 seconds measured
 
 n=1500 
 RDTSC instruction:
- 33689801895.000000 cycles measured => 12.477704 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 30301062402.000000 cycles measured => 11.222616 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 13423003.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 13.423003 seconds. 
+ 8917348.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 8.917348 seconds. 
 
 C gettimeofday() function:
- 13.428726 seconds measured
+ 9.063239 seconds measured
 
 RUN OPTIMISATION
+n=100 
+RDTSC instruction:
+ 2821972.000000 cycles measured => 0.001045 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 784.953125 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.000785 seconds. 
+
+C gettimeofday() function:
+ 0.000821 seconds measured
+
+n=200 
+RDTSC instruction:
+ 28379393.000000 cycles measured => 0.010511 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 7861.750000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.007862 seconds. 
+
+C gettimeofday() function:
+ 0.008375 seconds measured
+
+n=300 
+RDTSC instruction:
+ 90447904.000000 cycles measured => 0.033499 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 26906.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.026906 seconds. 
+
+C gettimeofday() function:
+ 0.027102 seconds measured
+
+n=400 
+RDTSC instruction:
+ 209945378.000000 cycles measured => 0.077758 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 63788.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.063788 seconds. 
+
+C gettimeofday() function:
+ 0.072187 seconds measured
+
+n=500 
+RDTSC instruction:
+ 415748272.000000 cycles measured => 0.153981 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 123518.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.123518 seconds. 
+
+C gettimeofday() function:
+ 0.141075 seconds measured
+
+n=600 
+RDTSC instruction:
+ 740861830.000000 cycles measured => 0.274393 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 246098.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.246098 seconds. 
+
+C gettimeofday() function:
+ 0.243714 seconds measured
+
+n=700 
+RDTSC instruction:
+ 1295163388.000000 cycles measured => 0.479690 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 356584.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.356584 seconds. 
+
+C gettimeofday() function:
+ 0.371196 seconds measured
+
+n=800 
+RDTSC instruction:
+ 1861470116.000000 cycles measured => 0.689433 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 531402.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.531402 seconds. 
+
+C gettimeofday() function:
+ 0.553493 seconds measured
+
+n=900 
+RDTSC instruction:
+ 2649276680.000000 cycles measured => 0.981214 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 800548.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.800548 seconds. 
+
+C gettimeofday() function:
+ 0.786579 seconds measured
+
+n=1000 
+RDTSC instruction:
+ 3817256482.000000 cycles measured => 1.413799 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 1057693.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.057693 seconds. 
+
+C gettimeofday() function:
+ 1.051710 seconds measured
+
+n=1100 
+RDTSC instruction:
+ 5224313878.000000 cycles measured => 1.934931 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 1474133.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.474133 seconds. 
+
+C gettimeofday() function:
+ 1.528440 seconds measured
+
+n=1200 
+RDTSC instruction:
+ 6534126738.000000 cycles measured => 2.420047 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 1949467.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.949467 seconds. 
+
+C gettimeofday() function:
+ 1.935047 seconds measured
+
+n=1300 
+RDTSC instruction:
+ 8439327276.000000 cycles measured => 3.125677 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 2511608.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 2.511608 seconds. 
+
+C gettimeofday() function:
+ 2.671345 seconds measured
+
+n=1400 
+RDTSC instruction:
+ 11704734476.000000 cycles measured => 4.335087 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 3182865.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 3.182865 seconds. 
+
+C gettimeofday() function:
+ 3.128445 seconds measured
+
+n=1500 
+RDTSC instruction:
+ 13343157364.000000 cycles measured => 4.941910 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+
+C clock() function:
+ 3905007.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 3.905007 seconds. 
+
+C gettimeofday() function:
+ 3.913730 seconds measured
+
 RUN VECTOR
 n=100 
 RDTSC instruction:
- 718446.000000 cycles measured => 0.000266 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 749450.000000 cycles measured => 0.000278 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 292.898438 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.000293 seconds. 
+ 223.726562 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.000224 seconds. 
 
 C gettimeofday() function:
- 0.000293 seconds measured
+ 0.000221 seconds measured
 
 n=200 
 RDTSC instruction:
- 5833809.000000 cycles measured => 0.002161 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 6121066.000000 cycles measured => 0.002267 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 2378.125000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.002378 seconds. 
+ 2042.593750 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.002043 seconds. 
 
 C gettimeofday() function:
- 0.002349 seconds measured
+ 0.001934 seconds measured
 
 n=300 
 RDTSC instruction:
- 21627788.000000 cycles measured => 0.008010 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 24220942.000000 cycles measured => 0.008971 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 8776.500000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.008776 seconds. 
+ 6846.250000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.006846 seconds. 
 
 C gettimeofday() function:
- 0.008387 seconds measured
+ 0.006701 seconds measured
 
 n=400 
 RDTSC instruction:
- 56107521.000000 cycles measured => 0.020781 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 56368029.000000 cycles measured => 0.020877 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 22398.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.022398 seconds. 
+ 16646.500000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.016646 seconds. 
 
 C gettimeofday() function:
- 0.022432 seconds measured
+ 0.016227 seconds measured
 
 n=500 
 RDTSC instruction:
- 111089481.000000 cycles measured => 0.041144 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 115702816.000000 cycles measured => 0.042853 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 44685.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.044685 seconds. 
+ 38017.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.038017 seconds. 
 
 C gettimeofday() function:
- 0.044302 seconds measured
+ 0.033613 seconds measured
 
 n=600 
 RDTSC instruction:
- 193568093.000000 cycles measured => 0.071692 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 199032122.000000 cycles measured => 0.073716 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 78806.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.078806 seconds. 
+ 54139.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.054139 seconds. 
 
 C gettimeofday() function:
- 0.078015 seconds measured
+ 0.055515 seconds measured
 
 n=700 
 RDTSC instruction:
- 311542591.000000 cycles measured => 0.115386 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 345819906.000000 cycles measured => 0.128081 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 125684.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.125684 seconds. 
+ 86850.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.086850 seconds. 
 
 C gettimeofday() function:
- 0.125054 seconds measured
+ 0.102138 seconds measured
 
 n=800 
 RDTSC instruction:
- 496585326.000000 cycles measured => 0.183920 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 513332264.000000 cycles measured => 0.190123 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 193693.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.193693 seconds. 
+ 140147.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.140147 seconds. 
 
 C gettimeofday() function:
- 0.197505 seconds measured
+ 0.135697 seconds measured
 
 n=900 
 RDTSC instruction:
- 712785793.000000 cycles measured => 0.263995 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 776318420.000000 cycles measured => 0.287525 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 293236.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.293236 seconds. 
+ 233792.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.233792 seconds. 
 
 C gettimeofday() function:
- 0.290687 seconds measured
+ 0.265250 seconds measured
 
 n=1000 
 RDTSC instruction:
- 964874806.000000 cycles measured => 0.357361 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 1254943398.000000 cycles measured => 0.464794 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 395039.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.395039 seconds. 
+ 380704.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.380704 seconds. 
 
 C gettimeofday() function:
- 0.381174 seconds measured
+ 0.429265 seconds measured
 
 n=1100 
 RDTSC instruction:
- 1300715581.000000 cycles measured => 0.481747 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 1882861090.000000 cycles measured => 0.697356 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 523144.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.523144 seconds. 
+ 541678.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.541678 seconds. 
 
 C gettimeofday() function:
- 0.518942 seconds measured
+ 0.588972 seconds measured
 
 n=1200 
 RDTSC instruction:
- 1761700038.000000 cycles measured => 0.652481 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 2636372238.000000 cycles measured => 0.976434 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 704694.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.704694 seconds. 
+ 767645.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.767645 seconds. 
 
 C gettimeofday() function:
- 0.733032 seconds measured
+ 0.826169 seconds measured
 
 n=1300 
 RDTSC instruction:
- 2456036513.000000 cycles measured => 0.909643 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 3430922122.000000 cycles measured => 1.270712 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 979653.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.979653 seconds. 
+ 936994.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 0.936994 seconds. 
 
 C gettimeofday() function:
- 0.982909 seconds measured
+ 1.015349 seconds measured
 
 n=1400 
 RDTSC instruction:
- 3189672380.000000 cycles measured => 1.181360 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 4197720568.000000 cycles measured => 1.554711 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 1278228.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.278228 seconds. 
+ 1272942.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.272942 seconds. 
 
 C gettimeofday() function:
- 1.269348 seconds measured
+ 1.268890 seconds measured
 
 n=1500 
 RDTSC instruction:
- 4095521249.000000 cycles measured => 1.516860 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
+ 5404839790.000000 cycles measured => 2.001793 seconds, assuming frequency is 2700.000000 MHz. (change in source file if different)
 
 C clock() function:
- 1679260.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.679260 seconds. 
+ 1528408.000000 cycles measured. On some systems, this number seems to be actually computed from a timer in seconds then transformed into clock ticks using the variable CLOCKS_PER_SEC. Unfortunately, it appears that CLOCKS_PER_SEC is sometimes set improperly. (According to this variable, your computer should be running at 1.000000 MHz). In any case, dividing by this value should give a correct timing: 1.528408 seconds. 
 
 C gettimeofday() function:
- 1.649611 seconds measured
+ 1.572320 seconds measured
 
