@@ -6,9 +6,8 @@ plt.style.use('bmh')
 title = "Performance plot"
 flags = ""
 unity = "flops/cycle"
-output_path = "plot_ex_2.png"
 
-if unity == "" or title == "" or output_path == "":
+if unity == "" or title == "":
        print("Missing something")
        exit()
 
@@ -103,6 +102,4 @@ ax.set_xlabel("Input size")
 ax.set_xlim(left=0)
 ax.set_ylim(bottom=0)
 
-# Save figure
-fig.savefig(output_path)
 plt.show()

@@ -6,9 +6,8 @@ plt.style.use('bmh')
 title = "Performance plot"
 flags = ""
 unity = "flops/cycle"
-output_path = "plot_ex_2.png"
 
-if unity == "" or title == "" or output_path == "":
+if unity == "" or title == "":
        print("Missing something")
        exit()
 
@@ -57,11 +56,16 @@ values = np.array([133.000000,
        71369124.500000,
        37915319.000000],dtype="float32")
 
+
+
 values_normal = values[::2]
 values_optimized = values[1::2]
 
+print(t)
+
+
 def w_n(x) -> np.float32:
-       return np.float(5*x)
+       return np.float(5*t[i])
 
 for i in range(len(values_normal)):
        values_normal[i] = w_n(i) / values_normal[i]
@@ -91,7 +95,7 @@ plt.title("\nIntel, 11th Gen Intel(R) Core(TM) i9-11900H @ 2.50GH\n" +
 
 ax.set_xlabel("Input size") 
 
-plt.yscale("log")
+plt.xscale("log")
  
 
 
@@ -99,6 +103,4 @@ plt.yscale("log")
 ax.set_xlim(left=0)
 ax.set_ylim(bottom=0)
 
-# Save figure
-fig.savefig(output_path)
 plt.show()
