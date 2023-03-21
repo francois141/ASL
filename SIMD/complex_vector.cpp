@@ -23,7 +23,7 @@ void maxperformance(complex_t* x, double* y, int n) {
 
   for (int i = 0; i < n; i += 16) 
   {
-    {      
+        {      
       // Step 1 : Get values for k 
       __m256d y_curr = _mm256_load_pd((double*)&y[i]);
   
@@ -60,7 +60,7 @@ void maxperformance(complex_t* x, double* y, int n) {
   
       // TODO : Improve bitwise operations
       __m256d final = _mm256_and_pd(v1,mask1);
-      __m256d final2 = _mm256_an''d_pd(v2,mask2);
+      __m256d final2 = _mm256_and_pd(v2,mask2);
       __m256d final3 = _mm256_and_pd(v3,mask3);
       
       final = _mm256_or_pd(final,final2);
