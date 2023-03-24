@@ -18,198 +18,130 @@ void slow_performance1(complex_t *x, double *y, int n) {
 }
 
 void maxperformance(complex_t* x, double* y, int n) {
-  
-  __m256d one_mask = _mm256_castsi256_pd(_mm256_set1_epi32(-1));
 
-  for (int i = 0; i < n; i += 16) 
+  __m256d comp_mask1 = _mm256_set_pd(0.5,0.5,0.5,0.5);
+  __m256d comp_mask2 = _mm256_set_pd(0.25,0.25,0.25,0.25);
+
+  for (int i = 0; i < n; i += 16) {
+  __m256d first_x = _mm256_load_pd((double*)&x[i]); 
+  __m256d second_x = _mm256_load_pd((double*)&x[i + 2]); 
+  __m256d first_x_2 = _mm256_load_pd((double*)&x[i + 4]); 
+  __m256d second_x_2 = _mm256_load_pd((double*)&x[i + 6]); 
+  __m256d first_x_3 = _mm256_load_pd((double*)&x[i + 8]); 
+  __m256d second_x_3 = _mm256_load_pd((double*)&x[i + 10]); 
+  __m256d first_x_4 = _mm256_load_pd((double*)&x[i + 12]); 
+  __m256d second_x_4 = _mm256_load_pd((double*)&x[i + 14]); 
   {
-        {      
-      // Step 1 : Get values for k 
-      __m256d y_curr = _mm256_load_pd((double*)&y[i]);
+      __m256d y_base = _mm256_load_pd(y + i);
   
-      // Step 2 : Get re and im
-      __m256d buff1 = _mm256_load_pd((double*)&x[i]);
-      __m256d buff2 = _mm256_load_pd((double*)&x[i+2]);
-          
-      __m256d re = _mm256_unpacklo_pd(buff1, buff2);
-      __m256d im = _mm256_unpackhi_pd(buff1, buff2);
-          
-      re = _mm256_permute4x64_pd(re, 0b11011000);
-      im = _mm256_permute4x64_pd(im, 0b11011000);
-          
-      __m256d im2 = _mm256_mul_pd(im,im);
-      __m256d reim = _mm256_mul_pd(re,im);
-          
-      __m256d newRe = _mm256_fmsub_pd(re,re, im2);
-      __m256d newIm = _mm256_add_pd(reim, reim); 
-        
-      // Step 3 : Get the three vectors
-      __m256d v1 = _mm256_min_pd(newRe,newIm);
-      __m256d v2 = _mm256_max_pd(newRe,newIm);
-          
-      // max vector computation - no need to compute the sqrt
-      __m256d v3 = _mm256_fmadd_pd(re,re, im2);
-          
-      // Step 4 : Compute final vector with the three vectors and the values of k
-      __m256d c1 = _mm256_cmp_pd(y_curr, _mm256_set_pd(0.25, 0.25, 0.25, 0.25), _CMP_LT_OQ);
-      __m256d c2 = _mm256_cmp_pd(y_curr, _mm256_set_pd(0.5, 0.5, 0.5, 0.5), _CMP_LT_OQ);
+      __m256d real_part = _mm256_unpacklo_pd(first_x, second_x);
+      __m256d imaginary_part = _mm256_unpackhi_pd(first_x, second_x);
   
-      __m256d mask1 = c1;
-      __m256d mask2 = _mm256_andnot_pd(c1,c2);
-      __m256d mask3 = _mm256_xor_pd(c2,one_mask);
-  
-      // TODO : Improve bitwise operations
-      __m256d final = _mm256_and_pd(v1,mask1);
-      __m256d final2 = _mm256_and_pd(v2,mask2);
-      __m256d final3 = _mm256_and_pd(v3,mask3);
+      real_part = _mm256_permute4x64_pd(real_part, 0b11011000);
+      imaginary_part = _mm256_permute4x64_pd(imaginary_part, 0b11011000);
       
-      final = _mm256_or_pd(final,final2);
-      final = _mm256_or_pd(final,final3);
+      __m256d real_mult_imaginary = _mm256_mul_pd(real_part, imaginary_part);
+      real_mult_imaginary = _mm256_add_pd(real_mult_imaginary, real_mult_imaginary);
+  
+      __m256d imaginary_square = _mm256_mul_pd(imaginary_part, imaginary_part);
       
-      // Step 5 : Increment the current vector
-      final = _mm256_add_pd(final,y_curr);
-      _mm256_store_pd(&y[i],final);
-    }
-    {      
-      // Step 1 : Get values for k 
-      __m256d y_curr = _mm256_load_pd((double*)&y[i+4]);
+      __m256d re_mult_sub = _mm256_fmsub_pd(real_part, real_part, imaginary_square);
+      __m256d re_mult_add = _mm256_fmadd_pd(real_part, real_part, imaginary_square);
   
-      // Step 2 : Get re and im
-      __m256d buff1 = _mm256_load_pd((double*)&x[i+4]);
-      __m256d buff2 = _mm256_load_pd((double*)&x[i+6]);
-          
-      __m256d re = _mm256_unpacklo_pd(buff1, buff2);
-      __m256d im = _mm256_unpackhi_pd(buff1, buff2);
-          
-      re = _mm256_permute4x64_pd(re, 0b11011000);
-      im = _mm256_permute4x64_pd(im, 0b11011000);
-          
-      __m256d im2 = _mm256_mul_pd(im,im);
-      __m256d reim = _mm256_mul_pd(re,im);
-          
-      __m256d newRe = _mm256_fmsub_pd(re,re, im2);
-      __m256d newIm = _mm256_add_pd(reim, reim); 
-        
-      // Step 3 : Get the three vectors
-      __m256d v1 = _mm256_min_pd(newRe,newIm);
-      __m256d v2 = _mm256_max_pd(newRe,newIm);
-          
-      // max vector computation - no need to compute the sqrt
-      __m256d v3 = _mm256_fmadd_pd(re,re, im2);
-          
-      // Step 4 : Compute final vector with the three vectors and the values of k
-      __m256d c1 = _mm256_cmp_pd(y_curr, _mm256_set_pd(0.25, 0.25, 0.25, 0.25), _CMP_LT_OQ);
-      __m256d c2 = _mm256_cmp_pd(y_curr, _mm256_set_pd(0.5, 0.5, 0.5, 0.5), _CMP_LT_OQ);
+      __m256d min_values = _mm256_min_pd(re_mult_sub, real_mult_imaginary);
+      __m256d max_values = _mm256_max_pd(re_mult_sub, real_mult_imaginary);
   
-      __m256d mask1 = c1;
-      __m256d mask2 = _mm256_andnot_pd(c1,c2);
-      __m256d mask3 = _mm256_xor_pd(c2,one_mask);
+      __m256d mask1 = _mm256_cmp_pd(y_base, comp_mask1, _CMP_GE_OQ);
+      __m256d mask2 = _mm256_cmp_pd(y_base, comp_mask2, _CMP_GE_OQ);
   
-      // TODO : Improve bitwise operations
-      __m256d final = _mm256_and_pd(v1,mask1);
-      __m256d final2 = _mm256_and_pd(v2,mask2);
-      __m256d final3 = _mm256_and_pd(v3,mask3);
+      __m256d y_to_add = _mm256_blendv_pd(min_values, max_values, mask2);
+      y_to_add = _mm256_blendv_pd(y_to_add, re_mult_add, mask1);
       
-      final = _mm256_or_pd(final,final2);
-      final = _mm256_or_pd(final,final3);
+      _mm256_store_pd(y + i, _mm256_add_pd(y_base, y_to_add));
+  }
+  {
+      __m256d y_base = _mm256_load_pd(y + i + 4);
+  
+      __m256d real_part = _mm256_unpacklo_pd(first_x_2, second_x_2);
+      __m256d imaginary_part = _mm256_unpackhi_pd(first_x_2, second_x_2);
+  
+      real_part = _mm256_permute4x64_pd(real_part, 0b11011000);
+      imaginary_part = _mm256_permute4x64_pd(imaginary_part, 0b11011000);
       
-      // Step 5 : Increment the current vector
-      final = _mm256_add_pd(final,y_curr);
-      _mm256_store_pd(&y[i+4],final);
-    }
-    {      
-      // Step 1 : Get values for k 
-      __m256d y_curr = _mm256_load_pd((double*)&y[i+8]);
+      __m256d real_mult_imaginary = _mm256_mul_pd(real_part, imaginary_part);
+      real_mult_imaginary = _mm256_add_pd(real_mult_imaginary, real_mult_imaginary);
   
-      // Step 2 : Get re and im
-      __m256d buff1 = _mm256_load_pd((double*)&x[i+8]);
-      __m256d buff2 = _mm256_load_pd((double*)&x[i+10]);
-          
-      __m256d re = _mm256_unpacklo_pd(buff1, buff2);
-      __m256d im = _mm256_unpackhi_pd(buff1, buff2);
-          
-      re = _mm256_permute4x64_pd(re, 0b11011000);
-      im = _mm256_permute4x64_pd(im, 0b11011000);
-          
-      __m256d im2 = _mm256_mul_pd(im,im);
-      __m256d reim = _mm256_mul_pd(re,im);
-          
-      __m256d newRe = _mm256_fmsub_pd(re,re, im2);
-      __m256d newIm = _mm256_add_pd(reim, reim); 
-        
-      // Step 3 : Get the three vectors
-      __m256d v1 = _mm256_min_pd(newRe,newIm);
-      __m256d v2 = _mm256_max_pd(newRe,newIm);
-          
-      // max vector computation - no need to compute the sqrt
-      __m256d v3 = _mm256_fmadd_pd(re,re, im2);
-          
-      // Step 4 : Compute final vector with the three vectors and the values of k
-      __m256d c1 = _mm256_cmp_pd(y_curr, _mm256_set_pd(0.25, 0.25, 0.25, 0.25), _CMP_LT_OQ);
-      __m256d c2 = _mm256_cmp_pd(y_curr, _mm256_set_pd(0.5, 0.5, 0.5, 0.5), _CMP_LT_OQ);
-  
-      __m256d mask1 = c1;
-      __m256d mask2 = _mm256_andnot_pd(c1,c2);
-      __m256d mask3 = _mm256_xor_pd(c2,one_mask);
-  
-      // TODO : Improve bitwise operations
-      __m256d final = _mm256_and_pd(v1,mask1);
-      __m256d final2 = _mm256_and_pd(v2,mask2);
-      __m256d final3 = _mm256_and_pd(v3,mask3);
+      __m256d imaginary_square = _mm256_mul_pd(imaginary_part, imaginary_part);
       
-      final = _mm256_or_pd(final,final2);
-      final = _mm256_or_pd(final,final3);
-      
-      // Step 5 : Increment the current vector
-      final = _mm256_add_pd(final,y_curr);
-      _mm256_store_pd(&y[i+8],final);
-    }
-    {      
-      // Step 1 : Get values for k 
-      __m256d y_curr = _mm256_load_pd((double*)&y[i+12]);
+      __m256d re_mult_sub = _mm256_fmsub_pd(real_part, real_part, imaginary_square);
+      __m256d re_mult_add = _mm256_fmadd_pd(real_part, real_part, imaginary_square);
   
-      // Step 2 : Get re and im
-      __m256d buff1 = _mm256_load_pd((double*)&x[i+12]);
-      __m256d buff2 = _mm256_load_pd((double*)&x[i+14]);
-          
-      __m256d re = _mm256_unpacklo_pd(buff1, buff2);
-      __m256d im = _mm256_unpackhi_pd(buff1, buff2);
-          
-      re = _mm256_permute4x64_pd(re, 0b11011000);
-      im = _mm256_permute4x64_pd(im, 0b11011000);
-          
-      __m256d im2 = _mm256_mul_pd(im,im);
-      __m256d reim = _mm256_mul_pd(re,im);
-          
-      __m256d newRe = _mm256_fmsub_pd(re,re, im2);
-      __m256d newIm = _mm256_add_pd(reim, reim); 
-        
-      // Step 3 : Get the three vectors
-      __m256d v1 = _mm256_min_pd(newRe,newIm);
-      __m256d v2 = _mm256_max_pd(newRe,newIm);
-          
-      // max vector computation - no need to compute the sqrt
-      __m256d v3 = _mm256_fmadd_pd(re,re, im2);
-          
-      // Step 4 : Compute final vector with the three vectors and the values of k
-      __m256d c1 = _mm256_cmp_pd(y_curr, _mm256_set_pd(0.25, 0.25, 0.25, 0.25), _CMP_LT_OQ);
-      __m256d c2 = _mm256_cmp_pd(y_curr, _mm256_set_pd(0.5, 0.5, 0.5, 0.5), _CMP_LT_OQ);
+      __m256d min_values = _mm256_min_pd(re_mult_sub, real_mult_imaginary);
+      __m256d max_values = _mm256_max_pd(re_mult_sub, real_mult_imaginary);
   
-      __m256d mask1 = c1;
-      __m256d mask2 = _mm256_andnot_pd(c1,c2);
-      __m256d mask3 = _mm256_xor_pd(c2,one_mask);
+      __m256d mask1 = _mm256_cmp_pd(y_base, comp_mask1, _CMP_GE_OQ);
+      __m256d mask2 = _mm256_cmp_pd(y_base, comp_mask2, _CMP_GE_OQ);
   
-      // TODO : Improve bitwise operations
-      __m256d final = _mm256_and_pd(v1,mask1);
-      __m256d final2 = _mm256_and_pd(v2,mask2);
-      __m256d final3 = _mm256_and_pd(v3,mask3);
+      __m256d y_to_add = _mm256_blendv_pd(min_values, max_values, mask2);
+      y_to_add = _mm256_blendv_pd(y_to_add, re_mult_add, mask1);
       
-      final = _mm256_or_pd(final,final2);
-      final = _mm256_or_pd(final,final3);
+      _mm256_store_pd(y + i + 4, _mm256_add_pd(y_base, y_to_add));
+  }
+  {
+      __m256d y_base = _mm256_load_pd(y + i + 8);
+  
+      __m256d real_part = _mm256_unpacklo_pd(first_x_3, second_x_3);
+      __m256d imaginary_part = _mm256_unpackhi_pd(first_x_3, second_x_3);
+  
+      real_part = _mm256_permute4x64_pd(real_part, 0b11011000);
+      imaginary_part = _mm256_permute4x64_pd(imaginary_part, 0b11011000);
       
-      // Step 5 : Increment the current vector
-      final = _mm256_add_pd(final,y_curr);
-      _mm256_store_pd(&y[i+12],final);
+      __m256d real_mult_imaginary = _mm256_mul_pd(real_part, imaginary_part);
+      real_mult_imaginary = _mm256_add_pd(real_mult_imaginary, real_mult_imaginary);
+  
+      __m256d imaginary_square = _mm256_mul_pd(imaginary_part, imaginary_part);
+      
+      __m256d re_mult_sub = _mm256_fmsub_pd(real_part, real_part, imaginary_square);
+      __m256d re_mult_add = _mm256_fmadd_pd(real_part, real_part, imaginary_square);
+  
+      __m256d min_values = _mm256_min_pd(re_mult_sub, real_mult_imaginary);
+      __m256d max_values = _mm256_max_pd(re_mult_sub, real_mult_imaginary);
+  
+      __m256d mask1 = _mm256_cmp_pd(y_base, comp_mask1, _CMP_GE_OQ);
+      __m256d mask2 = _mm256_cmp_pd(y_base, comp_mask2, _CMP_GE_OQ);
+  
+      __m256d y_to_add = _mm256_blendv_pd(min_values, max_values, mask2);
+      y_to_add = _mm256_blendv_pd(y_to_add, re_mult_add, mask1);
+      
+      _mm256_store_pd(y + i + 8, _mm256_add_pd(y_base, y_to_add));
+  }
+  {
+      __m256d y_base = _mm256_load_pd(y + i + 12);
+  
+      __m256d real_part = _mm256_unpacklo_pd(first_x_4, second_x_4);
+      __m256d imaginary_part = _mm256_unpackhi_pd(first_x_4, second_x_4);
+  
+      real_part = _mm256_permute4x64_pd(real_part, 0b11011000);
+      imaginary_part = _mm256_permute4x64_pd(imaginary_part, 0b11011000);
+      
+      __m256d real_mult_imaginary = _mm256_mul_pd(real_part, imaginary_part);
+      real_mult_imaginary = _mm256_add_pd(real_mult_imaginary, real_mult_imaginary);
+  
+      __m256d imaginary_square = _mm256_mul_pd(imaginary_part, imaginary_part);
+      
+      __m256d re_mult_sub = _mm256_fmsub_pd(real_part, real_part, imaginary_square);
+      __m256d re_mult_add = _mm256_fmadd_pd(real_part, real_part, imaginary_square);
+  
+      __m256d min_values = _mm256_min_pd(re_mult_sub, real_mult_imaginary);
+      __m256d max_values = _mm256_max_pd(re_mult_sub, real_mult_imaginary);
+  
+      __m256d mask1 = _mm256_cmp_pd(y_base, comp_mask1, _CMP_GE_OQ);
+      __m256d mask2 = _mm256_cmp_pd(y_base, comp_mask2, _CMP_GE_OQ);
+  
+      __m256d y_to_add = _mm256_blendv_pd(min_values, max_values, mask2);
+      y_to_add = _mm256_blendv_pd(y_to_add, re_mult_add, mask1);
+      
+      _mm256_store_pd(y + i + 12, _mm256_add_pd(y_base, y_to_add));
     }
   }
 }
